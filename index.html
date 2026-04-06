@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mehdi Molaei</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    /* ---- Home-page specific styles ---- */
+    .profile-block {
+      display: flex;
+      gap: 2.5rem;
+      align-items: flex-start;
+      margin-bottom: 2.5rem;
+    }
+
+    .profile-text {
+      flex: 1;
+    }
+
+    .profile-text h1 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .profile-text .title {
+      font-size: 1rem;
+      color: var(--color-text-muted);
+      margin-bottom: 1.2rem;
+    }
+
+    .profile-text .bio {
+      font-size: 0.97rem;
+      margin-bottom: 1.5rem;
+      max-width: 540px;
+    }
+
+    .profile-photo {
+      flex-shrink: 0;
+    }
+
+    .profile-photo img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .profile-photo .photo-placeholder {
+      width: 160px;
+      height: 160px;
+      border-radius: 8px;
+      background: var(--color-tag-bg);
+      border: 1px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-text-muted);
+      font-size: 0.8rem;
+    }
+
+    .links-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .links-row a {
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      text-decoration: none;
+    }
+
+    .links-row a:hover {
+      color: var(--color-accent);
+    }
+
+    @media (max-width: 600px) {
+      .profile-block {
+        flex-direction: column-reverse;
+        gap: 1.5rem;
+      }
+
+      .profile-photo img,
+      .profile-photo .photo-placeholder {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html">Mehdi Molaei</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="cv.html">CV</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main -->
+  <main>
+    <div class="container">
+
+      <div class="profile-block">
+        <div class="profile-text">
+          <h1>Mehdi Molaei</h1>
+          <p class="title">Senior Staff Engineer &middot; Computational Imaging &amp; ML</p>
+          <p class="bio">
+            I am a scientist-engineer working at the intersection of computational imaging,
+            machine learning, and soft matter physics. I spent a decade in academic research
+            &mdash; from bacterial hydrodynamics to cell membrane mechanics &mdash; before
+            building production ML and imaging systems at Countable Labs. My work spans
+            algorithm development, quantitative microscopy, and deploying data-driven
+            pipelines for real scientific instruments.
+          </p>
+          <div class="links-row">
+            <a href="mailto:m.aban.molaei@gmail.com">
+              &#9993; m.aban.molaei@gmail.com
+            </a>
+            <a href="https://scholar.google.com/citations?user=X3997dAAAAAJ&hl=en" target="_blank" rel="noopener">
+              &#128218; Google Scholar
+            </a>
+            <a href="https://github.com/mehdimolaei" target="_blank" rel="noopener">
+              &#128736; GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/mehdi-molaei" target="_blank" rel="noopener">
+              &#128101; LinkedIn
+            </a>
+          </div>
+        </div>
+        <div class="profile-photo">
+          <!-- Replace src with your actual photo path, e.g. assets/img/profile.jpg -->
+          <div class="photo-placeholder">Photo</div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Mehdi Molaei</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
