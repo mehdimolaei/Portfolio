@@ -118,6 +118,17 @@
       font-size: 0.93rem;
       line-height: 1.65;
     }
+
+    .cv-plain-list {
+      padding-left: 1.4rem;
+      font-size: 0.93rem;
+    }
+
+    .cv-note {
+      font-size: 0.88rem;
+      color: var(--color-text-muted);
+      margin-bottom: 0.8rem;
+    }
   </style>
 </head>
 <body>
@@ -141,6 +152,7 @@
 
       <div class="cv-header">
         <h1>Curriculum Vitae</h1>
+        <!-- TODO: compile docs/CV_MehdiMolaei.tex to generate this PDF -->
         <a class="btn-download" href="docs/CV_MehdiMolaei.pdf" download>&#8595; Download PDF</a>
       </div>
 
@@ -243,7 +255,7 @@
       <!-- Publications -->
       <div class="cv-section">
         <h2>Selected Publications</h2>
-        <p style="font-size:0.88rem; color:var(--color-text-muted); margin-bottom:0.8rem;">
+        <p class="cv-note">
           Full list on <a href="https://scholar.google.com/citations?user=X3997dAAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.
         </p>
 
@@ -268,7 +280,7 @@
       <!-- Honors -->
       <div class="cv-section">
         <h2>Honors &amp; Recognition</h2>
-        <ul style="padding-left:1.4rem; font-size:0.93rem;">
+        <ul class="cv-plain-list">
           <li>#1 Analytical Scientist Innovation Award, Countable Labs (2025)</li>
           <li>GoMRI Scholar for oil-spill research (2014)</li>
           <li>Top 0.1% in nationwide M.S. entrance examination, Iran (2007)</li>
@@ -279,7 +291,7 @@
       <!-- Service -->
       <div class="cv-section">
         <h2>Professional Service</h2>
-        <ul style="padding-left:1.4rem; font-size:0.93rem;">
+        <ul class="cv-plain-list">
           <li>Journal reviewer: <em>Science Advances</em>, <em>PNAS</em>, <em>Soft Matter</em>, <em>Journal of Fluid Mechanics</em>, <em>Langmuir</em>, <em>Nano Letters</em></li>
           <li>Member, American Physical Society and American Institute of Chemical Engineers</li>
           <li>Open-source: <a href="https://trajkit-learn.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener">Trajkit</a> — Python toolkit for spatiotemporal trajectory analysis</li>
