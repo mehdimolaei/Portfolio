@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects &mdash; Mehdi Molaei</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    /* ---- Projects-page specific styles ---- */
+    .page-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .section-heading {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin: 2.5rem 0 1.2rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .project-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+
+    .project-thumb {
+      flex-shrink: 0;
+      width: 120px;
+      height: 90px;
+      border-radius: 6px;
+      background: var(--color-tag-bg);
+      border: 1px solid var(--color-border);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-text-muted);
+      font-size: 0.75rem;
+    }
+
+    .project-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .project-body {
+      flex: 1;
+    }
+
+    .project-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+
+    .project-title a {
+      color: var(--color-text);
+      text-decoration: none;
+    }
+
+    .project-title a:hover {
+      color: var(--color-accent);
+      text-decoration: none;
+    }
+
+    .project-desc {
+      font-size: 0.92rem;
+      color: var(--color-text-muted);
+      margin-bottom: 0.6rem;
+      line-height: 1.55;
+    }
+
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .tag {
+      font-size: 0.78rem;
+      background: var(--color-tag-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      padding: 2px 8px;
+      color: var(--color-text-muted);
+    }
+
+    .project-links {
+      display: flex;
+      gap: 0.75rem;
+      margin-left: 0.25rem;
+    }
+
+    .project-links a {
+      font-size: 0.82rem;
+      color: var(--color-accent);
+      text-decoration: none;
+    }
+
+    .project-links a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .project-card {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .project-thumb {
+        width: 100%;
+        height: 120px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html">Mehdi Molaei</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="cv.html">CV</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main -->
+  <main>
+    <div class="container">
+
+      <h1 class="page-title">Projects</h1>
+
+      <!-- ===== Research Projects ===== -->
+      <h2 class="section-heading">Research</h2>
+      <div class="project-list">
+
+        <div class="project-card">
+          <div class="project-thumb">Thumbnail</div>
+          <div class="project-body">
+            <div class="project-title">
+              <a href="https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.4.013052" target="_blank" rel="noopener">
+                Probing Lipid Membrane Bending Mechanics via Gold Nanorod Tracking
+              </a>
+            </div>
+            <p class="project-desc">
+              We developed a polarization-resolved dark-field optical metrology system for tracking single gold nanorods
+              with sub-degree angular precision on lipid membranes. By combining physics-informed forward models with
+              correlated orientation fluctuations, we extracted quantitative bending moduli from model and cellular membranes.
+            </p>
+            <div class="project-meta">
+              <span class="tag">Physical Review Research</span>
+              <span class="tag">2022</span>
+              <div class="project-links">
+                <a href="https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.4.013052" target="_blank" rel="noopener">Paper</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-thumb">Thumbnail</div>
+          <div class="project-body">
+            <div class="project-title">
+              <a href="https://www.pnas.org/doi/abs/10.1073/pnas.2305283120" target="_blank" rel="noopener">
+                Measuring Response Functions of Active Materials from Data
+              </a>
+            </div>
+            <p class="project-desc">
+              We developed a domain-general spatiotemporal correlation framework for tensor fields in stochastic active systems.
+              By recasting correlation analysis as an ensemble-averaged material response function, we enabled robust inference
+              of mechanical properties from actomyosin networks in model systems and living cells.
+            </p>
+            <div class="project-meta">
+              <span class="tag">PNAS</span>
+              <span class="tag">2023</span>
+              <div class="project-links">
+                <a href="https://www.pnas.org/doi/abs/10.1073/pnas.2305283120" target="_blank" rel="noopener">Paper</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-thumb">Thumbnail</div>
+          <div class="project-body">
+            <div class="project-title">
+              <a href="https://physics.aps.org/articles/v14/s65" target="_blank" rel="noopener">
+                Interfacial Flow around Brownian Colloids
+              </a>
+            </div>
+            <p class="project-desc">
+              We developed correlated displacement velocimetry (CDV), a correlation-based statistical estimator
+              built on particle tracking that reconstructs nanoscale interfacial velocity fields. Applied to
+              thermally driven colloidal probes at fluid interfaces, CDV revealed vortex-like hydrodynamic structures.
+            </p>
+            <div class="project-meta">
+              <span class="tag">Physical Review Letters</span>
+              <span class="tag">2021</span>
+              <div class="project-links">
+                <a href="https://physics.aps.org/articles/v14/s65" target="_blank" rel="noopener">Paper</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-thumb">Thumbnail</div>
+          <div class="project-body">
+            <div class="project-title">
+              <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.120.118002" target="_blank" rel="noopener">
+                Nanoscale Rheology with Single Gold Nanorod Probes
+              </a>
+            </div>
+            <p class="project-desc">
+              Using polarization-resolved dark-field microscopy, we tracked single gold nanorods to measure both
+              translational and rotational diffusion simultaneously. We extracted nanoscale viscoelastic properties
+              and anisotropic diffusion tensors in complex fluids, including polymer solutions and living cells.
+            </p>
+            <div class="project-meta">
+              <span class="tag">Physical Review Letters</span>
+              <span class="tag">2018</span>
+              <div class="project-links">
+                <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.120.118002" target="_blank" rel="noopener">Paper</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-thumb">Thumbnail</div>
+          <div class="project-body">
+            <div class="project-title">
+              <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.113.068103" target="_blank" rel="noopener">
+                Failed Escape: Solid Surfaces Prevent Tumbling of E. coli
+              </a>
+            </div>
+            <p class="project-desc">
+              Using inline digital holographic microscopy, we showed that E. coli swimming near a solid surface
+              are hydrodynamically trapped — the surface suppresses the tumbling that normally reorients the cell,
+              causing extended near-surface runs. This work explained a longstanding puzzle in bacterial locomotion.
+            </p>
+            <div class="project-meta">
+              <span class="tag">Physical Review Letters</span>
+              <span class="tag">2014</span>
+              <div class="project-links">
+                <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.113.068103" target="_blank" rel="noopener">Paper</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-thumb">Thumbnail</div>
+          <div class="project-body">
+            <div class="project-title">
+              <a href="https://www.nature.com/articles/srep18883" target="_blank" rel="noopener">
+                Succeed Escape: Shear Flow Promotes Tumbling of E. coli near Surfaces
+              </a>
+            </div>
+            <p class="project-desc">
+              As a counterpart to the "Failed Escape" work, we showed that ambient shear flow rescues E. coli from
+              surface entrapment by restoring tumbling near solid boundaries. This provided a mechanistic explanation
+              for how bacteria escape surfaces in flow environments.
+            </p>
+            <div class="project-meta">
+              <span class="tag">Scientific Reports</span>
+              <span class="tag">2016</span>
+              <div class="project-links">
+                <a href="https://www.nature.com/articles/srep18883" target="_blank" rel="noopener">Paper</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-thumb">Thumbnail</div>
+          <div class="project-body">
+            <div class="project-title">
+              <a href="https://opg.optica.org/oe/fulltext.cfm?uri=oe-22-8-9643" target="_blank" rel="noopener">
+                Imaging Bacterial 3D Motion with Digital Holographic Microscopy
+              </a>
+            </div>
+            <p class="project-desc">
+              We built an inline digital holographic microscopy platform and developed a correlation-based denoising
+              algorithm for 3D tracking of bacteria in dense suspensions. The method enabled nanometer-precision
+              localization and full 3D trajectory reconstruction without fluorescent labels.
+            </p>
+            <div class="project-meta">
+              <span class="tag">Optics Express</span>
+              <span class="tag">2014</span>
+              <div class="project-links">
+                <a href="https://opg.optica.org/oe/fulltext.cfm?uri=oe-22-8-9643" target="_blank" rel="noopener">Paper</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-thumb">Thumbnail</div>
+          <div class="project-body">
+            <div class="project-title">
+              <a href="https://www.sciencedirect.com/science/article/pii/S0021979719312610" target="_blank" rel="noopener">
+                Interfacial Microrheology in a Miniature 3D-Printed Langmuir Trough
+              </a>
+            </div>
+            <p class="project-desc">
+              We designed and built a microscope-stage Langmuir trough using 3D printing, enabling simultaneous
+              interfacial tensiometry and microrheology. The device measured interfacial viscosity over an
+              8-order-of-magnitude dynamic range, opening access to previously intractable soft interface systems.
+            </p>
+            <div class="project-meta">
+              <span class="tag">J. Colloid Interface Sci.</span>
+              <span class="tag">2020</span>
+              <div class="project-links">
+                <a href="https://www.sciencedirect.com/science/article/pii/S0021979719312610" target="_blank" rel="noopener">Paper</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-thumb">Thumbnail</div>
+          <div class="project-body">
+            <div class="project-title">
+              <a href="https://www.biorxiv.org/content/10.1101/2023.07.17.549421" target="_blank" rel="noopener">
+                UltraPCR: Massively Parallel Single-Molecule Multiplexing
+              </a>
+            </div>
+            <p class="project-desc">
+              We developed the computational analysis platform for UltraPCR, a massively parallel single-molecule
+              digital PCR system. The platform converts multichannel light-sheet 3D imaging into calibrated molecular
+              counts, enabling precision multiplexing across 10+ targets simultaneously.
+            </p>
+            <div class="project-meta">
+              <span class="tag">bioRxiv</span>
+              <span class="tag">2023</span>
+              <div class="project-links">
+                <a href="https://www.biorxiv.org/content/10.1101/2023.07.17.549421" target="_blank" rel="noopener">Preprint</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.project-list research -->
+
+      <!-- ===== Personal Projects ===== -->
+      <h2 class="section-heading">Personal Projects</h2>
+      <div class="project-list">
+
+        <div class="project-card">
+          <div class="project-thumb">Thumbnail</div>
+          <div class="project-body">
+            <div class="project-title">
+              <a href="https://trajkit-learn.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener">
+                Trajkit
+              </a>
+            </div>
+            <p class="project-desc">
+              An open-source Python toolkit for analyzing spatiotemporal trajectories and structured time-series data.
+              Trajkit provides tools for correlation analysis, ensemble averaging, and inference from noisy particle
+              tracking experiments across physical, biological, and engineering systems.
+            </p>
+            <div class="project-meta">
+              <span class="tag">Python</span>
+              <span class="tag">Open Source</span>
+              <div class="project-links">
+                <a href="https://github.com/mehdimolaei/trajkit" target="_blank" rel="noopener">Code</a>
+                <a href="https://trajkit-learn.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener">Docs</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.project-list personal -->
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Mehdi Molaei</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
