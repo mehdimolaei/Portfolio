@@ -73,6 +73,7 @@ nav {
   top: 0;
   background: var(--color-bg);
   z-index: 100;
+  overflow: visible; /* required — .nav-links dropdown uses position:absolute */
 }
 
 .nav-inner {
@@ -107,6 +108,8 @@ nav {
   font-size: 0.95rem;
   color: var(--color-text-muted);
   text-decoration: none;
+  border-bottom: 2px solid transparent; /* reserve space to prevent layout shift on active */
+  padding-bottom: 2px;
 }
 
 .nav-links a:hover,
@@ -118,7 +121,6 @@ nav {
 .nav-links a.active {
   font-weight: 600;
   border-bottom: 2px solid var(--color-accent);
-  padding-bottom: 2px;
 }
 
 /* Mobile nav toggle button */
