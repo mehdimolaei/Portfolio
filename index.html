@@ -77,6 +77,7 @@
 
     .links-row a:hover {
       color: var(--color-accent);
+      text-decoration: none; /* suppress global a:hover underline */
     }
 
     @media (max-width: 600px) {
@@ -140,7 +141,8 @@
           </div>
         </div>
         <div class="profile-photo">
-          <!-- Replace src with your actual photo path, e.g. assets/img/profile.jpg -->
+          <!-- TODO: Replace this div with:
+               <img src="assets/img/profile.jpg" alt="Mehdi Molaei" width="160" height="160"> -->
           <div class="photo-placeholder">Photo</div>
         </div>
       </div>
