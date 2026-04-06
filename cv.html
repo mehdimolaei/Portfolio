@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV &mdash; Mehdi Molaei</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    /* ---- CV-page specific styles ---- */
+    .cv-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .cv-header h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+
+    .btn-download {
+      display: inline-block;
+      padding: 0.55rem 1.2rem;
+      background: var(--color-accent);
+      color: #fff;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+
+    .btn-download:hover {
+      background: var(--color-accent-hover);
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .cv-section {
+      margin-bottom: 2.5rem;
+    }
+
+    .cv-section h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-text-muted);
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .cv-item {
+      margin-bottom: 1.2rem;
+    }
+
+    .cv-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .cv-item-title {
+      font-weight: 600;
+      font-size: 0.97rem;
+    }
+
+    .cv-item-date {
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+      white-space: nowrap;
+    }
+
+    .cv-item-sub {
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+      margin-bottom: 0.1rem;
+    }
+
+    .cv-item-body {
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+    }
+
+    .cv-item ul {
+      padding-left: 1.4rem;
+      margin-top: 0.4rem;
+    }
+
+    .cv-item ul li {
+      font-size: 0.9rem;
+      margin-bottom: 0.3rem;
+      line-height: 1.5;
+    }
+
+    .pub-list {
+      padding-left: 1.4rem;
+    }
+
+    .pub-list li {
+      font-size: 0.9rem;
+      margin-bottom: 0.6rem;
+      line-height: 1.55;
+    }
+
+    .pub-list li strong {
+      font-weight: 600;
+    }
+
+    .cv-interests {
+      font-size: 0.93rem;
+      line-height: 1.65;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html">Mehdi Molaei</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="cv.html" class="active">CV</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main -->
+  <main>
+    <div class="container">
+
+      <div class="cv-header">
+        <h1>Curriculum Vitae</h1>
+        <a class="btn-download" href="docs/CV_MehdiMolaei.pdf" download>&#8595; Download PDF</a>
+      </div>
+
+      <!-- Education -->
+      <div class="cv-section">
+        <h2>Education</h2>
+
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <span class="cv-item-title">Ph.D., Mechanical Engineering &mdash; Texas Tech University</span>
+            <span class="cv-item-date">2012 &ndash; 2015</span>
+          </div>
+          <div class="cv-item-sub">Advisor: Prof. Jian Sheng &middot; Lubbock, TX</div>
+          <div class="cv-item-body">Dissertation: <em>Hydrodynamics of bacterial locomotion near interfaces</em></div>
+        </div>
+
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <span class="cv-item-title">M.S., Aerospace Engineering and Mechanics &mdash; University of Minnesota</span>
+            <span class="cv-item-date">2010 &ndash; 2012</span>
+          </div>
+          <div class="cv-item-sub">Advisor: Prof. Jian Sheng &middot; Minneapolis, MN</div>
+          <div class="cv-item-body">Dissertation: <em>Hydrodynamics of bacteria and solid-surface interaction using microfluidics and digital holographic microscopy</em></div>
+        </div>
+
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <span class="cv-item-title">M.S., Mechanical Engineering &mdash; Sharif University of Technology</span>
+            <span class="cv-item-date">2007 &ndash; 2010</span>
+          </div>
+          <div class="cv-item-sub">Tehran, Iran</div>
+          <div class="cv-item-body">Dissertation: <em>One-dimensional modeling of the cardiovascular system</em></div>
+        </div>
+
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <span class="cv-item-title">B.S., Mechanical Engineering &mdash; Sharif University of Technology</span>
+            <span class="cv-item-date">2003 &ndash; 2007</span>
+          </div>
+          <div class="cv-item-sub">Tehran, Iran</div>
+        </div>
+      </div>
+
+      <!-- Research Interests -->
+      <div class="cv-section">
+        <h2>Research Interests</h2>
+        <p class="cv-interests">
+          Spatiotemporal modeling and inference; multimodal signal fusion and representation learning;
+          rare-event and rare-class inference; machine-learning-enabled scientific instrumentation;
+          real-time scientific computing; computational imaging and quantitative microscopy;
+          soft and living matter physics; diffusion models.
+        </p>
+      </div>
+
+      <!-- Experience -->
+      <div class="cv-section">
+        <h2>Professional Appointments</h2>
+
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <span class="cv-item-title">Senior Staff Engineer, Computational Imaging &mdash; Countable Labs</span>
+            <span class="cv-item-date">Aug 2022 &ndash; Jan 2026</span>
+          </div>
+          <div class="cv-item-sub">Palo Alto, CA</div>
+          <ul>
+            <li>Led architecture and delivery of the production analysis platform for multichannel light-sheet 3D PCR imaging; recognized with the #1 Analytical Scientist Innovation Award (2025).</li>
+            <li>Built end-to-end ETL and computational imaging pipeline for DNA molecule counting: 3D reconstruction, artifact correction, compartment segmentation, and unsupervised state assignment.</li>
+            <li>Designed a low-latency on-prem microservice platform with DAG-based scheduling, reducing time-to-result from &gt;12 hours to live results.</li>
+            <li>Led DNA linkage detection, multiplexed decoding (4 to 10 channels), and 24-plex combinatorial labeling via a multimodal VAE; achieved 97&ndash;98% accuracy.</li>
+          </ul>
+        </div>
+
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <span class="cv-item-title">Research Scientist &mdash; University of Chicago</span>
+            <span class="cv-item-date">Aug 2020 &ndash; Aug 2022</span>
+          </div>
+          <div class="cv-item-sub">Pritzker School of Molecular Engineering &middot; Chicago, IL</div>
+          <ul>
+            <li>Developed a domain-general spatiotemporal correlation framework for tensor fields in stochastic systems, extending correlation analysis to incorporate internal headings and orientations.</li>
+            <li>Recast correlation analysis as a data-driven material response function and applied it to actomyosin active systems.</li>
+            <li>Mentored doctoral students and presented results at conferences.</li>
+          </ul>
+        </div>
+
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <span class="cv-item-title">Postdoctoral Researcher &mdash; University of Pennsylvania</span>
+            <span class="cv-item-date">Sep 2015 &ndash; Aug 2020</span>
+          </div>
+          <div class="cv-item-sub">Physical Sciences Oncology Center; Crocker Lab; Stebe Lab &middot; Philadelphia, PA</div>
+          <ul>
+            <li>Developed correlated displacement velocimetry (CDV) for nanoscale interfacial velocity field reconstruction.</li>
+            <li>Built a polarization-resolved dark-field optical metrology system for sub-degree nanorod orientation tracking and membrane mechanical inference.</li>
+            <li>Designed a miniature 3D-printed Langmuir trough enabling simultaneous imaging tensiometry and interfacial microrheology.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Publications -->
+      <div class="cv-section">
+        <h2>Selected Publications</h2>
+        <p style="font-size:0.88rem; color:var(--color-text-muted); margin-bottom:0.8rem;">
+          Full list on <a href="https://scholar.google.com/citations?user=X3997dAAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.
+        </p>
+
+        <ol class="pub-list">
+          <li><strong>Molaei, M.</strong> et al. &ldquo;High dynamic range digital quantitation of targets.&rdquo; U.S. Patent Application US20250264395A1, Countable Labs.</li>
+          <li>Chauhan, R., Usman, H., Minocha, N., <strong>Molaei, M.</strong>, et al. &ldquo;Predictive modeling and experimental validation of magnetophoretic delivery of magnetic nanocultures.&rdquo; <em>ACS Materials Letters</em>, 2025.</li>
+          <li>Usman, H., <strong>Molaei, M.</strong>, House, S. D., et al. &ldquo;Magnetically responsive nanocultures for direct microbial assessment in soil environments.&rdquo; <em>Science Advances</em>, 2025.</li>
+          <li>Redford, S. A., Colen, J., Zemsky, S., <strong>Molaei, M.</strong>, et al. &ldquo;Motor crosslinking augments elasticity in active nematics.&rdquo; <em>Soft Matter</em>, 2024.</li>
+          <li>Chou, W. H., <strong>Molaei, M.</strong>, et al. &ldquo;Limiting pool and actin architecture controls myosin cluster sizes in adherent cells.&rdquo; <em>Biophysical Journal</em>, 2024.</li>
+          <li><strong>Molaei, M.</strong> et al. &ldquo;Measuring response functions of active materials from data.&rdquo; <em>PNAS</em>, 2023.</li>
+          <li>Lai, J. H., Keum, J., Lee, H. G., <strong>Molaei, M.</strong>, et al. &ldquo;New realm of precision multiplexing enabled by massively-parallel single molecule UltraPCR.&rdquo; <em>bioRxiv</em>, 2023.</li>
+          <li><strong>Molaei, M.</strong>, Sreeja, K. K., Graber, Z. T., et al. &ldquo;Probing lipid membrane bending mechanics using gold nanorod tracking.&rdquo; <em>Physical Review Research</em>, 2022.</li>
+          <li><strong>Molaei, M.</strong>, Chisholm, N. G., et al. &ldquo;Interfacial flow around Brownian colloids.&rdquo; <em>Physical Review Letters</em>, 2021.</li>
+          <li><strong>Molaei, M.</strong> and Crocker, J. C. &ldquo;Interfacial microrheology and tensiometry in a miniature, 3-D printed Langmuir trough.&rdquo; <em>Journal of Colloid and Interface Science</em>, 2020.</li>
+          <li><strong>Molaei, M.</strong>, Atefi, E., and Crocker, J. C. &ldquo;Nanoscale rheology and anisotropic diffusion using single gold nanorod probes.&rdquo; <em>Physical Review Letters</em>, 2018.</li>
+          <li><strong>Molaei, M.</strong> and Sheng, J. &ldquo;Succeed escape: Flow shear promotes tumbling of <em>Escherichia coli</em> near a solid surface.&rdquo; <em>Scientific Reports</em>, 2016.</li>
+          <li><strong>Molaei, M.</strong>, Barry, M., Stocker, R., et al. &ldquo;Failed escape: Solid surfaces prevent tumbling of <em>Escherichia coli</em>.&rdquo; <em>Physical Review Letters</em>, 2014.</li>
+          <li><strong>Molaei, M.</strong> and Sheng, J. &ldquo;Imaging bacterial 3D motion using digital in-line holographic microscopy.&rdquo; <em>Optics Express</em>, 2014.</li>
+        </ol>
+      </div>
+
+      <!-- Honors -->
+      <div class="cv-section">
+        <h2>Honors &amp; Recognition</h2>
+        <ul style="padding-left:1.4rem; font-size:0.93rem;">
+          <li>#1 Analytical Scientist Innovation Award, Countable Labs (2025)</li>
+          <li>GoMRI Scholar for oil-spill research (2014)</li>
+          <li>Top 0.1% in nationwide M.S. entrance examination, Iran (2007)</li>
+          <li>Top 0.1% in nationwide B.S. entrance examination, Iran (2003)</li>
+        </ul>
+      </div>
+
+      <!-- Service -->
+      <div class="cv-section">
+        <h2>Professional Service</h2>
+        <ul style="padding-left:1.4rem; font-size:0.93rem;">
+          <li>Journal reviewer: <em>Science Advances</em>, <em>PNAS</em>, <em>Soft Matter</em>, <em>Journal of Fluid Mechanics</em>, <em>Langmuir</em>, <em>Nano Letters</em></li>
+          <li>Member, American Physical Society and American Institute of Chemical Engineers</li>
+          <li>Open-source: <a href="https://trajkit-learn.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener">Trajkit</a> — Python toolkit for spatiotemporal trajectory analysis</li>
+        </ul>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Mehdi Molaei</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
