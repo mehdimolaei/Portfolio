@@ -92,6 +92,48 @@
         height: 120px;
       }
     }
+
+    /* ---- Featured Work (reuses projects-page card pattern) ---- */
+    .section-heading {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin: 2.5rem 0 1.2rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .project-list { display: flex; flex-direction: column; gap: 1.5rem; }
+    .project-card { display: flex; gap: 1.5rem; align-items: flex-start; }
+    .project-thumb {
+      flex-shrink: 0; width: 120px; height: 90px; border-radius: 6px;
+      background: var(--color-tag-bg); border: 1px solid var(--color-border);
+      overflow: hidden; display: flex; align-items: center; justify-content: center;
+      color: var(--color-text-muted); font-size: 0.75rem;
+    }
+    .project-thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .project-body { flex: 1; }
+    .project-title { font-size: 1rem; font-weight: 600; margin-bottom: 0.35rem; }
+    .project-title a { color: var(--color-text); text-decoration: none; }
+    .project-title a:hover { color: var(--color-accent); }
+    .project-desc {
+      font-size: 0.92rem; color: var(--color-text-muted);
+      margin-bottom: 0.6rem; line-height: 1.55;
+    }
+    .project-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+    .tag {
+      font-size: 0.78rem; background: var(--color-tag-bg);
+      border: 1px solid var(--color-border); border-radius: 4px;
+      padding: 2px 8px; color: var(--color-text-muted);
+    }
+    .project-links { display: flex; gap: 0.75rem; margin-left: 0.25rem; }
+    .project-links a { font-size: 0.82rem; color: var(--color-accent); text-decoration: none; }
+    .project-links a:hover { text-decoration: underline; }
+    @media (max-width: 600px) {
+      .project-card { flex-direction: column; gap: 0.75rem; }
+      .project-thumb { width: 100%; height: 120px; }
+    }
   </style>
 </head>
 <body>
@@ -154,6 +196,112 @@
           <img src="assets/img/profile.jpg" alt="Mehdi Molaei" width="160" height="160" />
         </div>
       </div>
+
+      <h2 class="section-heading">Featured Work</h2>
+      <div class="project-list">
+
+        <div class="project-card">
+          <div class="project-thumb">Thumbnail</div>
+          <div class="project-body">
+            <div class="project-title">
+              <a href="https://www.biorxiv.org/content/10.1101/2023.07.17.549421" target="_blank" rel="noopener">
+                Countable PCR &mdash; Production Imaging Pipeline for Molecular Counting
+              </a>
+            </div>
+            <p class="project-desc">
+              Built the computational analysis platform for Countable PCR, a massively parallel
+              single-molecule digital PCR system. It converts multichannel light-sheet 3D
+              imaging into calibrated, quality-controlled molecular counts, enabling precision
+              multiplexing across 10+ targets simultaneously.
+            </p>
+            <div class="project-meta">
+              <span class="tag">Light-sheet microscopy</span>
+              <span class="tag">3D imaging</span>
+              <span class="tag">Molecular counting</span>
+              <span class="tag">Scientific ML</span>
+              <span class="tag">Production pipeline</span>
+              <div class="project-links">
+                <a href="https://www.biorxiv.org/content/10.1101/2023.07.17.549421" target="_blank" rel="noopener">Preprint</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-thumb">
+            <img src="assets/img/membrane-bending.png" alt="Polarization-resolved tracking of gold nanorods on a lipid membrane to measure bending mechanics" />
+          </div>
+          <div class="project-body">
+            <div class="project-title">
+              <a href="https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.4.013052" target="_blank" rel="noopener">
+                Gold Nanorod Tracking for Membrane Mechanics
+              </a>
+            </div>
+            <p class="project-desc">
+              Developed a polarization-resolved dark-field metrology system and physics-informed
+              forward models to track single gold nanorods with sub-degree angular precision,
+              extracting quantitative bending moduli from model and cellular membranes.
+            </p>
+            <div class="project-meta">
+              <span class="tag">Quantitative microscopy</span>
+              <span class="tag">Soft matter</span>
+              <span class="tag">Physics-informed inference</span>
+              <div class="project-links">
+                <a href="https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.4.013052" target="_blank" rel="noopener">Paper</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-thumb">Thumbnail</div>
+          <div class="project-body">
+            <div class="project-title">
+              <a href="https://www.pnas.org/doi/abs/10.1073/pnas.2305283120" target="_blank" rel="noopener">
+                Response Functions of Active Materials
+              </a>
+            </div>
+            <p class="project-desc">
+              Built a domain-general spatiotemporal correlation framework that recasts correlation
+              analysis as an ensemble-averaged response function, enabling robust inference of
+              mechanical properties from actomyosin networks in model systems and living cells.
+            </p>
+            <div class="project-meta">
+              <span class="tag">Active matter</span>
+              <span class="tag">Microrheology</span>
+              <span class="tag">Statistical physics</span>
+              <div class="project-links">
+                <a href="https://www.pnas.org/doi/abs/10.1073/pnas.2305283120" target="_blank" rel="noopener">Paper</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-thumb">Thumbnail</div>
+          <div class="project-body">
+            <div class="project-title">
+              <a href="https://trajkit-learn.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener">
+                Trajkit &mdash; Open-Source Trajectory Toolkit
+              </a>
+            </div>
+            <p class="project-desc">
+              An open-source Python toolkit for correlation analysis, ensemble averaging, and
+              inference from noisy particle-tracking experiments across physical, biological,
+              and engineering systems.
+            </p>
+            <div class="project-meta">
+              <span class="tag">Python</span>
+              <span class="tag">Open Source</span>
+              <div class="project-links">
+                <a href="https://github.com/mehdimolaei/trajkit" target="_blank" rel="noopener">Code</a>
+                <a href="https://trajkit-learn.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener">Docs</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.project-list featured -->
 
     </div>
   </main>
