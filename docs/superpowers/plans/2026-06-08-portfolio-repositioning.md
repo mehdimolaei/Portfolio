@@ -34,7 +34,8 @@ In `index.html`, replace the entire `<div class="profile-text"> ... </div>` bloc
     inference, and production software &mdash; from light-sheet 3D imaging and
     molecular counting to multiplexed decoding for real scientific instruments.
     A decade of soft-matter and biophysics research underpins the production
-    pipelines I now build, most recently at Countable Labs.
+    pipelines I build, most recently at Countable Labs. I am the founder of
+    Fovea Lab.
   </p>
   <p class="bio" style="color: var(--color-text-muted);">
     <!-- PLACEHOLDER METRIC: replace bracketed text with a defensible number -->
@@ -149,11 +150,11 @@ In `index.html`, immediately after the closing `</div>` of `.profile-block` and 
     <div class="project-body">
       <div class="project-title">
         <a href="https://www.biorxiv.org/content/10.1101/2023.07.17.549421" target="_blank" rel="noopener">
-          UltraPCR &mdash; Production Imaging Pipeline for Molecular Counting
+          Countable PCR &mdash; Production Imaging Pipeline for Molecular Counting
         </a>
       </div>
       <p class="project-desc">
-        Built the computational analysis platform for UltraPCR, a massively parallel
+        Built the computational analysis platform for Countable PCR, a massively parallel
         single-molecule digital PCR system. It converts multichannel light-sheet 3D
         imaging into calibrated, quality-controlled molecular counts, enabling precision
         multiplexing across 10+ targets simultaneously.
@@ -248,18 +249,18 @@ In `index.html`, immediately after the closing `</div>` of `.profile-block` and 
 </div><!-- /.project-list featured -->
 ```
 
-- [ ] **Step 3: Verify the four cards exist and UltraPCR is first**
+- [ ] **Step 3: Verify the four cards exist and Countable PCR is first**
 
 Run: `grep -c "project-card" index.html`
 Expected: `4`
 
-Run: `grep -n "project-title" index.html | head -1` then confirm the first card title below it is UltraPCR:
-Run: `grep -n "UltraPCR &mdash; Production Imaging Pipeline" index.html`
+Run: `grep -n "project-title" index.html | head -1` then confirm the first card title below it is Countable PCR:
+Run: `grep -n "Countable PCR &mdash; Production Imaging Pipeline" index.html`
 Expected: one match, appearing before the other three card titles.
 
 - [ ] **Step 4: Visual check**
 
-Open `index.html`. Confirm: "Featured Work" heading, four cards in order (UltraPCR, Gold Nanorod, Response Functions, Trajkit). The Gold Nanorod card shows the membrane-bending image; the others show the "Thumbnail" placeholder. Resize narrow to confirm cards stack on mobile.
+Open `index.html`. Confirm: "Featured Work" heading, four cards in order (Countable PCR, Gold Nanorod, Response Functions, Trajkit). The Gold Nanorod card shows the membrane-bending image; the others show the "Thumbnail" placeholder. Resize narrow to confirm cards stack on mobile.
 
 - [ ] **Step 5: Commit**
 
@@ -319,7 +320,7 @@ In `projects.html`, the content currently is:
 
 Restructure so there is **one** `.project-list` and **no** `section-heading` elements. Keep `<h1 class="page-title">Projects</h1>`. The new single list contains all 10 existing cards, **verbatim in content**, in this order:
 
-1. UltraPCR (the existing bioRxiv card — currently last in the Research list)
+1. Countable PCR (the existing bioRxiv card — currently last in the Research list, and currently titled "UltraPCR")
 2. Trajkit (the existing Personal Projects card)
 3. Response Functions of Active Materials (PNAS 2023)
 4. Probing Lipid Membrane Bending Mechanics (PRR 2022)
@@ -330,7 +331,9 @@ Restructure so there is **one** `.project-list` and **no** `section-heading` ele
 9. Failed Escape: Solid Surfaces Prevent Tumbling (PRL 2014)
 10. Imaging Bacterial 3D Motion with Digital Holographic Microscopy (Optics Express 2014)
 
-Concretely: delete the two `<h2 class="section-heading">...</h2>` lines and the second `<div class="project-list">...</div>` wrapper/closing so all cards live inside the first `.project-list`. Then move the existing UltraPCR card and Trajkit card to the top of that list, and reorder the remaining research cards to match the order above. Do not edit any card's inner HTML (titles, descriptions, tags, links, images stay exactly as they are).
+Concretely: delete the two `<h2 class="section-heading">...</h2>` lines and the second `<div class="project-list">...</div>` wrapper/closing so all cards live inside the first `.project-list`. Then move the existing Countable PCR card (currently titled "UltraPCR") and Trajkit card to the top of that list, and reorder the remaining research cards to match the order above.
+
+**One content edit (the rename):** in the Countable PCR card, change the title text `UltraPCR: Massively Parallel Single-Molecule Multiplexing` to `Countable PCR: Massively Parallel Single-Molecule Multiplexing`, and in its description change `We developed the computational analysis platform for UltraPCR, a massively parallel` to `We developed the computational analysis platform for Countable PCR, a massively parallel`. Otherwise do not edit any card's inner HTML (titles, descriptions, tags, links, images stay exactly as they are).
 
 - [ ] **Step 2: Verify structure — one list, no headers, correct first card**
 
@@ -343,9 +346,12 @@ Expected: `1`
 Run: `grep -c 'class="project-card"' projects.html`
 Expected: `10`
 
-Run: `grep -n 'project-title' projects.html | head -1` and confirm the first card title that follows is UltraPCR:
-Run: `grep -n 'UltraPCR: Massively Parallel' projects.html`
+Run: `grep -n 'project-title' projects.html | head -1` and confirm the first card title that follows is Countable PCR:
+Run: `grep -n 'Countable PCR: Massively Parallel' projects.html`
 Expected: one match, and it appears before the Trajkit and all research card titles (lowest line number among card titles).
+
+Run: `grep -c 'UltraPCR' projects.html`
+Expected: `0` (legacy name fully replaced).
 
 - [ ] **Step 3: Verify no card content was lost**
 
@@ -357,7 +363,7 @@ Expected: at least `1`.
 
 - [ ] **Step 4: Visual check**
 
-Open `projects.html`. Confirm: single "Projects" title, no "Research"/"Personal Projects" subheadings, 10 cards in one continuous list, UltraPCR first and Trajkit second. Membrane-bending card still shows its image.
+Open `projects.html`. Confirm: single "Projects" title, no "Research"/"Personal Projects" subheadings, 10 cards in one continuous list, Countable PCR first and Trajkit second. Membrane-bending card still shows its image.
 
 - [ ] **Step 5: Commit**
 

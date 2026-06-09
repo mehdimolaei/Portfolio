@@ -25,8 +25,10 @@ valuable, what proof exists, and which projects best demonstrate senior-level wo
 - **Projects page:** A **single flat reordered list** — no academia/industry split, no
   "Research" / "Personal Projects" section headers. Production/engineering work first,
   then research papers by impact/recency.
-- **Featured Work on home:** UltraPCR is featured **once** as the lead (not split into
-  two cards). Curated set of 4 cards total.
+- **Featured Work on home:** Countable PCR (the system formerly named "UltraPCR" — use
+  the current name "Countable PCR" in all public copy) is featured **once** as the lead
+  (not split into two cards). Curated set of 4 cards total.
+- **Hero mentions Fovea Lab:** the bio briefly notes that Mehdi founded Fovea Lab.
 - **Tech stack unchanged:** Static HTML/CSS/JS, no framework. Reuse existing
   `.project-card` styles and CSS custom properties.
 
@@ -49,7 +51,8 @@ Replace current title + bio with industry-first framing.
 - **Bio (2–3 sentences):** Lead with what he builds (computational imaging + ML systems
   that turn raw microscopy / instrument data into calibrated, defensible biological
   measurements), then one sentence bridging the academic foundation (soft matter,
-  biophysics, quantitative microscopy) to deployed production work at Countable Labs.
+  biophysics, quantitative microscopy) to deployed production work at Countable Labs, and
+  a brief note that he founded Fovea Lab.
 - **Keywords to weave in naturally (no stuffing):** computational imaging, scientific ML,
   quantitative microscopy, light-sheet microscopy, 3D/4D imaging, production pipelines,
   molecular counting, multiplexed decoding, physics-informed inference.
@@ -75,9 +78,9 @@ New section below the links row. Heading: `Featured Work`. Reuse the existing
 `.project-card` visual style (thumb + body + tags + links) so it matches the Projects
 page. Four cards, production first:
 
-1. **UltraPCR — Production Imaging Pipeline for Molecular Counting**
+1. **Countable PCR — Production Imaging Pipeline for Molecular Counting**
    Computational platform converting multichannel light-sheet 3D PCR imaging into
-   calibrated molecular counts with QC. Tags: Light-sheet · 3D imaging · Molecular
+   calibrated molecular counts with QC. (System formerly named "UltraPCR".) Tags: Light-sheet · 3D imaging · Molecular
    counting · Scientific ML · Production. Link: bioRxiv preprint.
 2. **Gold Nanorod Tracking for Membrane Mechanics**
    Polarization-resolved dark-field metrology + physics-informed inference for membrane
@@ -113,7 +116,7 @@ Convert from two sections (Research, Personal Projects) to a **single flat list*
   cards live in one `.project-list`.
 - Keep the existing page title (`Projects`).
 - **New order (production/engineering first, then research by impact/recency):**
-  1. UltraPCR (bioRxiv 2023)
+  1. Countable PCR (bioRxiv 2023; rename legacy "UltraPCR" title)
   2. Trajkit (open source)
   3. Response Functions of Active Materials (PNAS 2023)
   4. Probing Lipid Membrane Bending Mechanics (PRR 2022)
@@ -144,10 +147,10 @@ Convert from two sections (Research, Personal Projects) to a **single flat list*
 
 - Home hero communicates the industry-first value proposition immediately; production
   imaging/ML work is visible without opening the CV.
-- Featured Work shows 4 curated cards, UltraPCR first, styled consistently with the
+- Featured Work shows 4 curated cards, Countable PCR first, styled consistently with the
   Projects page.
-- Projects page is a single reordered list with no academia/industry headers; UltraPCR
-  and Trajkit appear first.
+- Projects page is a single reordered list with no academia/industry headers; Countable
+  PCR and Trajkit appear first.
 - No invented metrics — any number is a visible `[PLACEHOLDER: ...]`.
 - `<title>`, meta description, and OG tags present on the home page.
 - Site remains minimal, readable, and visually unchanged in style (same accent color,
