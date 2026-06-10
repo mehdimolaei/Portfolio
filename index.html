@@ -99,7 +99,7 @@
       }
     }
 
-    /* ---- Featured Work (reuses projects-page card pattern) ---- */
+    /* ---- Featured Work — dot-nav panel ---- */
     .section-heading {
       font-size: 1.1rem;
       font-weight: 600;
@@ -110,35 +110,99 @@
       padding-bottom: 0.4rem;
       border-bottom: 1px solid var(--color-border);
     }
-    .project-list { display: flex; flex-direction: column; gap: 1.5rem; }
-    .project-card { display: flex; gap: 1.5rem; align-items: flex-start; }
-    .project-thumb {
-      flex-shrink: 0; width: 120px; height: 90px; border-radius: 6px;
-      background: var(--color-tag-bg); border: 1px solid var(--color-border);
-      overflow: hidden; display: flex; align-items: center; justify-content: center;
-      color: var(--color-text-muted); font-size: 0.75rem;
+
+    .project-panel { min-height: 160px; }
+
+    .panel-card {
+      display: none;
+      gap: 1.5rem;
+      align-items: flex-start;
     }
-    .project-thumb img { width: 100%; height: 100%; object-fit: cover; }
-    .project-body { flex: 1; }
-    .project-title { font-size: 1rem; font-weight: 600; margin-bottom: 0.35rem; }
-    .project-title a { color: var(--color-text); text-decoration: none; }
-    .project-title a:hover { color: var(--color-accent); }
-    .project-desc {
-      font-size: 0.92rem; color: var(--color-text-muted);
-      margin-bottom: 0.6rem; line-height: 1.55;
+    .panel-card.active { display: flex; }
+
+    .panel-thumb {
+      flex-shrink: 0;
+      width: 200px;
+      height: 150px;
+      border-radius: 8px;
+      background: var(--color-tag-bg);
+      border: 1px solid var(--color-border);
+      overflow: hidden;
     }
-    .project-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+    .panel-thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+    .panel-body { flex: 1; }
+
+    .panel-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+    }
+    .panel-title a { color: var(--color-text); text-decoration: none; }
+    .panel-title a:hover { color: var(--color-accent); }
+
+    .panel-desc {
+      font-size: 0.92rem;
+      color: var(--color-text-muted);
+      line-height: 1.55;
+      margin-bottom: 0.75rem;
+    }
+
+    .panel-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
     .tag {
-      font-size: 0.78rem; background: var(--color-tag-bg);
-      border: 1px solid var(--color-border); border-radius: 4px;
-      padding: 2px 8px; color: var(--color-text-muted);
+      font-size: 0.78rem;
+      background: var(--color-tag-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      padding: 2px 8px;
+      color: var(--color-text-muted);
     }
-    .project-links { display: flex; gap: 0.75rem; margin-left: 0.25rem; }
-    .project-links a { font-size: 0.82rem; color: var(--color-accent); text-decoration: none; }
-    .project-links a:hover { text-decoration: underline; }
+
+    .card-link {
+      font-size: 0.82rem;
+      color: var(--color-accent);
+      text-decoration: none;
+      margin-left: 0.25rem;
+    }
+    .card-link:hover { text-decoration: underline; }
+
+    .dot-nav {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      margin-top: 1.25rem;
+    }
+    .dot-nav button {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--color-border);
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: background 0.2s;
+    }
+    .dot-nav button.active,
+    .dot-nav button:hover { background: var(--color-accent); }
+
+    .view-all {
+      margin-top: 1rem;
+      font-size: 0.88rem;
+      text-align: center;
+    }
+    .view-all a { color: var(--color-accent); text-decoration: none; }
+    .view-all a:hover { text-decoration: underline; }
+
     @media (max-width: 600px) {
-      .project-card { flex-direction: column; gap: 0.75rem; }
-      .project-thumb { width: 100%; height: 120px; }
+      .panel-card { flex-direction: column; }
+      .panel-thumb { width: 100%; height: 160px; }
     }
   </style>
 </head>
@@ -198,88 +262,131 @@
       </div>
 
       <h2 class="section-heading">Featured Work</h2>
-      <div class="project-list">
+      <div class="project-panel" id="featuredPanel">
 
-        <div class="project-card">
-          <div class="project-body">
-            <div class="project-title">
+        <div class="panel-card active">
+          <div class="panel-body">
+            <div class="panel-title">
               <a href="https://www.biorxiv.org/content/10.1101/2023.07.17.549421" target="_blank" rel="noopener">
                 Countable PCR &mdash; Production Imaging Pipeline for Molecular Counting
               </a>
             </div>
-            <p class="project-desc">
+            <p class="panel-desc">
               Built the computational analysis platform for Countable PCR, a massively parallel
-              single-molecule digital PCR system. It converts multichannel light-sheet 3D
-              imaging into calibrated, quality-controlled molecular counts, enabling precision
-              multiplexing across 10+ targets simultaneously.
+              single-molecule digital PCR system converting multichannel light-sheet 3D imaging
+              into calibrated molecular counts across 10+ targets simultaneously.
             </p>
-            <div class="project-meta">
+            <div class="panel-meta">
               <span class="tag">Light-sheet microscopy</span>
-              <span class="tag">3D imaging</span>
               <span class="tag">Molecular counting</span>
               <span class="tag">Scientific ML</span>
-              <span class="tag">Production pipeline</span>
-              <div class="project-links">
-                <a href="https://www.biorxiv.org/content/10.1101/2023.07.17.549421" target="_blank" rel="noopener">Preprint</a>
-              </div>
+              <a class="card-link" href="https://www.biorxiv.org/content/10.1101/2023.07.17.549421" target="_blank" rel="noopener">Preprint</a>
             </div>
           </div>
         </div>
 
-        <div class="project-card">
-          <div class="project-thumb">
+        <div class="panel-card">
+          <div class="panel-thumb">
             <img src="assets/img/membrane-bending.webp" alt="Gold nanorod resting on a curved 3D lipid bilayer membrane" />
           </div>
-          <div class="project-body">
-            <div class="project-title">
+          <div class="panel-body">
+            <div class="panel-title">
               <a href="https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.4.013052" target="_blank" rel="noopener">
                 Gold Nanorod Tracking for Membrane Mechanics
               </a>
             </div>
-            <p class="project-desc">
-              Developed a polarization-resolved dark-field metrology system and physics-informed
-              forward models to track single gold nanorods with sub-degree angular precision,
-              extracting quantitative bending moduli from model and cellular membranes.
+            <p class="panel-desc">
+              Polarization-resolved dark-field metrology and physics-informed forward models
+              for tracking single gold nanorods with sub-degree angular precision, extracting
+              bending moduli from model and cellular membranes.
             </p>
-            <div class="project-meta">
+            <div class="panel-meta">
               <span class="tag">Quantitative microscopy</span>
-              <span class="tag">Soft matter</span>
               <span class="tag">Physics-informed inference</span>
-              <div class="project-links">
-                <a href="https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.4.013052" target="_blank" rel="noopener">Paper</a>
-              </div>
+              <a class="card-link" href="https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.4.013052" target="_blank" rel="noopener">Paper</a>
             </div>
           </div>
         </div>
 
-        <div class="project-card">
-          <div class="project-thumb">
+        <div class="panel-card">
+          <div class="panel-thumb">
             <img src="assets/img/active-materials.webp" alt="Coral actomyosin filament network threaded by correlation flow lines" />
           </div>
-          <div class="project-body">
-            <div class="project-title">
+          <div class="panel-body">
+            <div class="panel-title">
               <a href="https://www.pnas.org/doi/abs/10.1073/pnas.2305283120" target="_blank" rel="noopener">
                 Response Functions of Active Materials
               </a>
             </div>
-            <p class="project-desc">
-              Built a domain-general spatiotemporal correlation framework that recasts correlation
-              analysis as an ensemble-averaged response function, enabling robust inference of
-              mechanical properties from actomyosin networks in model systems and living cells.
+            <p class="panel-desc">
+              Domain-general spatiotemporal correlation framework for inferring mechanical
+              response functions from actomyosin networks in model systems and living cells.
             </p>
-            <div class="project-meta">
+            <div class="panel-meta">
               <span class="tag">Active matter</span>
               <span class="tag">Microrheology</span>
               <span class="tag">Statistical physics</span>
-              <div class="project-links">
-                <a href="https://www.pnas.org/doi/abs/10.1073/pnas.2305283120" target="_blank" rel="noopener">Paper</a>
-              </div>
+              <a class="card-link" href="https://www.pnas.org/doi/abs/10.1073/pnas.2305283120" target="_blank" rel="noopener">Paper</a>
             </div>
           </div>
         </div>
 
+        <div class="panel-card">
+          <div class="panel-thumb">
+            <img src="assets/img/interfacial-flow.webp" alt="Colloidal sphere at a fluid interface surrounded by vortex flow streamlines" />
+          </div>
+          <div class="panel-body">
+            <div class="panel-title">
+              <a href="https://physics.aps.org/articles/v14/s65" target="_blank" rel="noopener">
+                Interfacial Flow around Brownian Colloids
+              </a>
+            </div>
+            <p class="panel-desc">
+              Correlated displacement velocimetry (CDV) — a particle-tracking-based estimator
+              that reconstructs nanoscale interfacial velocity fields, revealing vortex-like
+              hydrodynamic structures at fluid interfaces.
+            </p>
+            <div class="panel-meta">
+              <span class="tag">Particle tracking</span>
+              <span class="tag">Fluid interfaces</span>
+              <a class="card-link" href="https://physics.aps.org/articles/v14/s65" target="_blank" rel="noopener">Paper</a>
+            </div>
+          </div>
+        </div>
 
-      </div><!-- /.project-list featured -->
+        <div class="panel-card">
+          <div class="panel-thumb">
+            <img src="assets/img/nanoscale-rheology.webp" alt="Single gold nanorod with rotational motion blur in a viscoelastic medium" />
+          </div>
+          <div class="panel-body">
+            <div class="panel-title">
+              <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.120.118002" target="_blank" rel="noopener">
+                Nanoscale Rheology with Single Gold Nanorod Probes
+              </a>
+            </div>
+            <p class="panel-desc">
+              Simultaneous translational and rotational single-nanorod tracking to extract
+              nanoscale viscoelastic properties and anisotropic diffusion tensors in complex
+              fluids and living cells.
+            </p>
+            <div class="panel-meta">
+              <span class="tag">Nanorheology</span>
+              <span class="tag">Dark-field microscopy</span>
+              <a class="card-link" href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.120.118002" target="_blank" rel="noopener">Paper</a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.project-panel -->
+
+      <div class="dot-nav" id="featuredDots" aria-label="Featured project navigation">
+        <button class="active" aria-label="Project 1"></button>
+        <button aria-label="Project 2"></button>
+        <button aria-label="Project 3"></button>
+        <button aria-label="Project 4"></button>
+        <button aria-label="Project 5"></button>
+      </div>
+      <p class="view-all"><a href="projects.html">View all projects &rarr;</a></p>
 
     </div>
   </main>

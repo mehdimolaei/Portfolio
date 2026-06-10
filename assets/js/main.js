@@ -1,3 +1,19 @@
+// Featured Work dot navigation
+document.addEventListener('DOMContentLoaded', function () {
+  var cards = document.querySelectorAll('#featuredPanel .panel-card');
+  var dots  = document.querySelectorAll('#featuredDots button');
+  if (!cards.length || !dots.length) return;
+
+  function show(i) {
+    cards.forEach(function (c, j) { c.classList.toggle('active', i === j); });
+    dots.forEach(function (d, j)  { d.classList.toggle('active', i === j); });
+  }
+
+  dots.forEach(function (dot, i) {
+    dot.addEventListener('click', function () { show(i); });
+  });
+});
+
 // Mobile nav toggle
 document.addEventListener('DOMContentLoaded', function () {
   var toggle = document.querySelector('.nav-toggle');
